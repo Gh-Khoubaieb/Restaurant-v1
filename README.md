@@ -14,5 +14,10 @@ The application is built using plain HTML5, CSS, JS for front-end and Symfony 4 
   * A page where a user should be able to order for food and view order history
   * A page where the admin can do the following :
     * See a list of orders
-    * Add new product
- 
+    * Add new product 
+
+<h2> Project Status </h2>
+
+
+This project is currently in development. 
+Ordering and adding a product is in progress.
