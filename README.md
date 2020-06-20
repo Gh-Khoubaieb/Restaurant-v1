@@ -6,7 +6,7 @@
 
 A simple website that contains restaurant menu items that are fetched from a mysql database. 
 <br>
-The application is built using plain HTML5, CSS, JS for front-end and Symfony 4 for the back-end.  
+The application is built using plain HTML5, CSS3, JS for front-end and PHP/Symfony 4 for the back-end.  
 
 <h2> Features </h2>
 
