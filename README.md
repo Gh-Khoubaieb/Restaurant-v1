@@ -22,3 +22,14 @@ The application is built using plain HTML5, CSS, JS for front-end and Symfony 4 
 This project is currently in development. 
 <br>
 The order and the addition of a new product are in progress.
+<hr>
+
+<img   src="https://i.imgur.com/DkFGVWL.png">
+
+<img  src="https://i.imgur.com/wpJbAMl.png">
+
+<img  src="https://i.imgur.com/bwV8aTz.png">
+
+<img  src="https://i.imgur.com/IMP2vVz.png">
+
+<img  src="https://i.imgur.com/xRRQa4l.png">
