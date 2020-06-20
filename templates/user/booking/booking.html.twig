@@ -1,0 +1,36 @@
+
+{% extends 'base.html.twig' %}
+{% block title 'Tous les meals' %}
+
+{% block body %}
+    <div class="container mt-4">
+
+        <h2> <i class="fas fa-utensils"> </i> Réservation d'une table </h2>
+
+
+        <fieldset>
+            <legend>
+                <i> Informations </i>
+            </legend>
+
+    {{ form_start(form) }}
+    <div class="row m-3">
+        <div>{{ form_label(form.Bookingdate, 'Date de reservation :') }}</div>
+        <div class="col-md-3">{{ form_widget(form.Bookingdate) }}</div>
+
+        <p>à</p>
+        <div class="col-md-2">{{ form_widget(form.Bookingtime) }}</div>
+
+    </div>
+    <div class="row m-3">
+        <div>{{ form_label(form.Bookingdate, 'Number de couverts :') }}</div>
+        <div class="col-md-1">{{ form_widget(form.Numberofseats) }}</div>
+    </div>
+
+    {{ form_rest(form) }}
+    <button class="btn btn-primary" >{{ button |default('reserver') }}</button>
+    <button class="btn btn-danger" type="reset" >Annuler</button>
+    {{ form_end(form) }}
+            </fieldset>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+
+{% extends 'base.html.twig' %}
+{% block title 'Tous les meals' %}
+
+{% block body %}
+
+    <div    class="container mt-4">
+
+
+        {{ form_start(form) }}
+        <h2> <i class="fa fa-fire"> </i> Ajouter d'un produit alimentaire au catlogue </h2>
+        <fieldset>
+            <legend>
+                <i class="fa fa-check"> Caractéristiques  </i>
+            </legend>
+        <ul style="list-style: none" >
+            <div>{{ form_label(form.Name, 'Nom :') }}</div>
+            <li class="col-md-5">{{ form_widget(form.Name) }}</li>
+
+            <div>{{ form_label(form.Description, 'Description :') }}</div>
+
+                <li class="col-md-5">{{ form_widget(form.Description) }}</li>
+
+
+            <div>{{ form_label(form.Photo, 'Photo :') }}</div>
+                <li class="col-md-5">{{ form_widget(form.Photo) }}</li>
+
+
+            <p><i class="fa fa-exclamation-triangle"> </i> Merci de renommer le fichier de la photo avec le nom de
+                l'ailement <strong>avant</strong> de l'envoyer
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>  <i class="fa fa-refresh"> </i> Approvisionnement </h2> </legend>
+        <ul style="list-style: none">
+            <div>{{ form_label(form.quantityinstock, 'Stock initial :') }}</div>
+            <li class="col-md-5">{{ form_widget(form.quantityinstock) }}</li>
+            <div>{{ form_label(form.buyprice, 'Prix d`achat :') }}</div>
+            <li class="col-md-5">{{ form_widget(form.buyprice) }} </li>
+            <div>{{ form_label(form.saleprice, 'Peix de vente :') }}</div>
+            <li class="col-md-5">{{ form_widget(form.saleprice) }} </li>
+
+        </ul>
+
+
+        {{ form_rest(form) }}
+        <button class="btn btn-primary" >{{ button |default('Ajouter') }}</button>
+        <button class="btn btn-danger" type="reset" >Annuler</button>
+        {{ form_end(form) }}
+    </ul>
+        </fieldset>
+    </div>
+{% endblock %}

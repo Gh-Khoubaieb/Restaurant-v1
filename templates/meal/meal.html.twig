@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Tous les meals' %}
+
+{% block body %}
+    <div class="jumbotron">
+
+
+    <div class="container mt-4">
+        <h1 class="text-center">Carte du restaurant</h1>
+
+
+        {% for  messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+    <table class="table">
+
+
+        <thead>
+
+        <tr class="text-center">
+            <th>Menu</td>
+            <th >Description</td>
+            <th class="pr-5">Prix </td>
+        </tr>
+
+        </thead>
+        <tbody>
+        <!-- Code HTML à écrire -->
+
+        {%  for meal in meals %}
+
+
+        <tr class="">
+            <td>
+                <img src="images/meals/{{ meal.photo}}" alt="" width="200" class="m-3">
+            </td>
+            <td class="pt-5">
+                <strong> {{ meal.Name}} </strong>
+                <p> {{ meal.Description }} </p>
+            </td>
+            <td class="pt-5"> {{meal.SalePrice}} € </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+{% endblock %}

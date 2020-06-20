@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Reserved meals' %}
+
+{% block body %}
+    <div class="jumbotron">
+
+
+    <div class="container mt-4">
+        <h2><i class="fa fa-cogs"> </i> Se connecter avec un compte utilisateur</h2>
+    <legend>
+        <i class="fa fa-lock"> Historique des commandes </i>
+    </legend>
+    <caption class="text-center">Liste des commandes </caption>
+
+    <table class="table">
+
+        <thead>
+
+        <tr class="text-center">
+            <th>Num Com</th>
+            <th >Num User</th>
+            <th>Date de creation</th>
+            <th>Date succés</th>
+            <th>TVA</th>
+            <th>Prix TVA</th>
+            <th>Total</th>
+        </tr>
+
+        </thead>
+        <tbody>
+       
+
+        {%  for order in orders %}
+
+
+        <tr class="text-center">
+            <td>
+                {{ order.Id }}
+            </td>
+
+                <td> {{ order.UserId}} </td>
+                <td > {{ order.Creationtimestamp |date('Y-m-d') }} </td>
+            <td > {{ order.completetimestamp |date('Y-m-d')}} </td>
+            <td > {{ order.Taxrate }}  %</td>
+            <td > {{order.taxamount}} € </td>
+            <td > {{order.totalamount}} € </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

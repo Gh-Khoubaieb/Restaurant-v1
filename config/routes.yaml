@@ -1,0 +1,8 @@
+index:
+    path: /
+    controller: App\Controller\MealController::index
+
+#new:
+#    path: /new
+#    controller: App\Controller\MealController::new
+

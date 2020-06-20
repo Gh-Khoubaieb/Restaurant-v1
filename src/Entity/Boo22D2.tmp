@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\BookingRepository")
+ */
+class Booking
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $BookingDate;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getBookingDate(): ?\DateTimeInterface
+    {
+        return $this->BookingDate;
+    }
+
+    public function setBookingDate(\DateTimeInterface $BookingDate): self
+    {
+        $this->BookingDate = $BookingDate;
+
+        return $this;
+    }
+}
